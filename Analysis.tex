@@ -81,13 +81,22 @@
 		$$\sum^{\infty}_{n=0}{(-1)^k *a_n}$$
 		Sei $a_n$ eine monotone, reelle Nullfolge, dann konvergiert die alternierende Reihe
 
+	\subsection{Regel von L'Hospital}
+		Für Grenzwerte bei Brüchen, wenn:
+		\begin{enumerate}
+			\item Zähler und Nenner gegen 0 oder $\pm \infty$ gehen
+			\item Grenzwert des Bruchs $\lim_{x \to x_0} \frac{f'(x)}{g'(x)}$ existiert
+		\end{enumerate}
+		Regel: $\lim_{x \to x_0} \frac{f'(x)}{g'(x)} = \lim_{x \to x_0} \frac{f'(x)}{g'(x)}$
+
 	\subsection{Sandwich-Prinzip}
 		Wenn eine Folge zwischen 2 konvergierenden Folgen mit dem selben Grenzwert liegt, konvergiert diese auch gegen den selben Grenzwert.
 
 	\subsection{Wurzel-/Quotientenkriterium}
 		Eine Reihe $ \sum_{}^{} a_k  $ ist absolut konvergent wenn:\\
 		$1. \lim_{k \to \infty} \sqrt[k]{|a_k|}  = q < 1$\\
-		$2. \lim_{k \to \infty} \frac{|a_{k+1}|}{a_k} $
+		$2. \lim_{k \to \infty} \frac{|a_{k+1}|}{a_k}  = q < 1$\\
+		Wenn $q \geqslant 1$ gilt, ist die Reihe divergent.
 		
 	\subsection{Integralkriterium}
 		
