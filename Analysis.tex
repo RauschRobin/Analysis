@@ -55,8 +55,19 @@
 		\item Jede beschränkte Folge in $\mathbb{R}$ oder $\mathbb{C}$ hat wenigstens einen Häufungspunkt
   		\item Jede beschränkte Folge in $\mathbb{R}$ oder $\mathbb{C}$ hat wenigstens eine konvergente Teilfolge
 	\end{enumerate}
+
+
+\section{Grenzwert}
+	$$\color{red}\text{A ist Grenzwert } \iff \lim_{n\rightarrow\infty}{a_{n}=A} \iff\forall_{\epsilon>0}~\exists_{n_{0}\in\mathbb{N}} ~\forall_{n \leq n_{0}}: | a     		_{n}-A | < \epsilon$$\\
+	Für alle Epsilon die Größer als 0 sind, gibt es ein $n_{0}$ $\underline{\text{ab dem}}$ alle Folgenden $n>n_{0}$ Glieder innerhalb des Epsilon-Gürtels liegen. (Das 		heißt $a_{n}$ - Grenzwert ist kleiner 	als Epsilon)\\\\
+	Jede Geometrische Folge: $a_{n}=q^{n}$ ist eine Nullfolge, wenn $\color{red}-1<q<1$\\\\
+	Geometrische Folgen haben ihre Variablen immer nur als Potenz bsp.: $a_{n}:~\frac{1}{2^{n}}$
 	
-\section{Couchikriterium}
+\section{Cauchykriterium}
+	$$\forall_{\epsilon>0}~\exists_{n_{0}\in\mathbb{N}} ~\forall_{n \geq n_{\epsilon}~, m \geq n_{\epsilon}}: | a_{n}-a_{m} | < \epsilon$$
+	Für jedes $\epsilon > 0$ gibt es einen Index $n_{\epsilon} \in \mathbb{N}$, so dass für all $n\geq n_{\epsilon}$ und $m\geq n_{\epsilon}$,\\
+	die Abschätzung $| a_{n}-a_{m} | < \epsilon$ erfüllt ist.\\
+	Ist das Cauchy kriterium erfüllt ist die Folge konvergent, und hat einen Grenzwert
 
 \section{Konvergenzkriterium}
 	$\lim_{n \to \infty} \; a_n = a \Leftrightarrow \forall_{\varepsilon > 0} \exists _{n_\varepsilon \in  \mathbb{N}}$\\
@@ -66,7 +77,9 @@
 	\subsection{Satz der monotonen Konvergenz}
 		Jede noch monoton wachsende/fallende nach oben/unten beschränkte Folge $(a_n)_{n \in \mathbb{N}}$ ist konvergent.\\
 
-	\subsection{Leibniz-Verfahren}
+	\subsection{Leibniz-Kriterium}
+		$$\sum^{\infty}_{n=0}{(-1)^k *a_n}$$
+		Sei $a_n$ eine monotone, reelle Nullfolge, dann konvergiert die alternierende Reihe
 
 	\subsection{Sandwich-Prinzip}
 		Wenn eine Folge zwischen 2 konvergierenden Folgen mit dem selben Grenzwert liegt, konvergiert diese auch gegen den selben Grenzwert.
@@ -87,11 +100,67 @@
 		Eine Funktion ist stetig, falls die Funktion keine Sprünge hat. 
 		Linke Seite der Funktion ist gleich rechte Seite der Funktion.\\
 		$f(x_0) = \lim_{x \to x_{0^-}} f(x) = \lim_{x \to x_{0^+}} f(x) $ \\
+	
+	\subsection{Konvergenzradius}
+		\includegraphics[scale=0.3]{Bilder/Konvergenzradius.jpg}
+
+	\subsection{Wichtigste Potenzreihen}
+		$$
+		\begin{aligned}
+		&\text{Funktion }&& \text{Potenzreihe }&& \text{Bereich} \\
+		f(x)&= \frac{1}{1-x}&& =\sum^{\infty}_{n=0}x^{n} && -1 <x <1\\\\
+		f(x)&= \ln{(1+x)}&&=\sum^{\infty}_{n=0} \frac{(-1)^{n+1}}{n}*x^{n} && -1 <x <1\\\\
+		f(x)&=e^{x} &&= \sum^{\infty}_{n=0}{\frac{1}{n!}}*x^{n}\\\\
+		g(x)&=x*e^{x^{2}}&&=x*\sum^{\infty}_{n=0} \frac{{(x^{2})^{n}}}{n!} = \sum^{\infty}_{n=0} \frac{x^{2n+1}}{n!}\\\\
+		f(x)&=cos(x) &&= \sum^{\infty}_{n=0}{ \frac{(-1)^{n}}{(2n)!}*x^{2n}}\\\\
+		f(x)&=sin(x) &&= \sum^{\infty}_{n=0}{ \frac{(-1)^{n}}{(2n+1)!}*x^{2n+1}}
+		\end{aligned}
+		$$
 
 \section{Kurvendiskussion}
 	\subsection{Newtonverfahren}
 		Annähern an Nullstellen durch Rekursion:\\
 		$x_{n+1} = x_n + \frac{f(x_n)}{f´(x_n)}$
+		
+	\subsection{Ableitungen}
+		\subsubsection{Grundfunktionen}
+			\begin{tabular}{|c|c|}
+				 \hline
+				$f(x)$ & $f^{'}(x)$ \\
+				\hline
+				$x^{n}$ & $n*x^{n-1}$ \\
+				\hline
+				$e^{x}$ & $e^{x}$ \\
+				\hline
+				$\ln(x)$ & $\frac{1}{x}$ \\
+				\hline
+				$\sin{(x)}$ & $\cos{(x)}$ \\
+				\hline
+				$\cos{(x)}$ & $-\sin{(x)}$ \\
+				\hline
+				$\sinh{(x)}$ & $\cosh{(x)}$ \\
+				\hline
+				$\cosh{(x)}$ & $\sinh{(x)}$ \\
+				\hline
+			\end{tabular}
+
+		\subsubsection{Regeln}
+			\begin{tabular}{|c|c|c|}
+				 \hline
+				Name & Vorher & Nachher \\
+				\hline
+				Summenregel & $(f\pm g)$ & $f^{'} \pm g^{'}$ \\
+				\hline
+				Produktregel & $(f*g)$ & $f^{'} *g + f* g^{'}$ \\
+				\hline
+				Quotientenregel & $(\frac{f}{g})$ & $\frac{f^{'}*g+f*g^{'}}{g^{2}}$ \\
+				\hline
+				Kettenregel & $f(g(x))$ & $f^{'}(g(x))*g'(x)$ \\
+				\hline
+			\end{tabular}
+
+	\subsection{Tangentengleichung}
+		$$t(x) = f(x_{0}) +f^{'}(x_{0})*(x-x_{0})$$
 
 \section{Taylor Entwicklung}
 	Wird genutzt um aus Funktionen Reihen zu machen.\\ 
