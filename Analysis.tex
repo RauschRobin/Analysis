@@ -20,6 +20,7 @@
 \usepackage{colortbl}
 \usepackage{fancyhdr} 
 \usepackage{tabularx}
+\usepackage{pgfplots}
 \usepackage{xcolor}
 \usepackage{color}
 \usetikzlibrary{decorations.text}
@@ -33,7 +34,7 @@
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
-\author{\slshape Robin Rausch, Florian Maslowski}
+\author{\slshape Robin Rausch, Florian Maslowski, Ozan Akzebe}
 \title{Analysis}
 \date{\slshape \today}
 \begin{document}
@@ -175,10 +176,11 @@
 	Wird genutzt um aus Funktionen Reihen zu machen.\\ 
 	Formel: $f(x) = \sum_{i = 0}^{\infty} \frac{f^{(i)}(x_0)}{i!} \cdot (x-x_0)^i$
 
-
-	\begin{enumerate}
-		\item 
-	\end{enumerate}
-
-
+\section{3d Bild} %Wir können jz auch Funktionen plotten --> sogar mega nice
+\begin{tikzpicture}
+	\begin{axis}[colormap/cool, hide axis]
+		\addplot3[mesh, samples=50]{1-x^2-y^2};
+	\end{axis}
+\end{tikzpicture}
+	
 \end{document}
