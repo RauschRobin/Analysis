@@ -34,6 +34,7 @@
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
+\newcolumntype{Z}{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}X}
 \author{\slshape Robin Rausch, Florian Maslowski, Ozan Akzebe}
 \title{Analysis}
 \date{\slshape \today}
@@ -134,11 +135,15 @@
 		
 	\subsection{Ableitungen}
 		\subsubsection{Grundfunktionen}
-			\begin{tabular}{|c|c|}
+			\begin{tabular}{c|c}
 				 \hline
 				$f(x)$ & $f^{'}(x)$ \\
 				\hline
 				$x^{n}$ & $n*x^{n-1}$ \\
+				\hline\\
+				$\frac{1}{x}$ & $- \frac{1}{x^2}$ \\\\
+				\hline
+				$\sqrt{x}$ & $\frac{1}{2\sqrt{x}}$\\
 				\hline
 				$e^{x}$ & $e^{x}$ \\
 				\hline
@@ -147,12 +152,25 @@
 				$\sin{(x)}$ & $\cos{(x)}$ \\
 				\hline
 				$\cos{(x)}$ & $-\sin{(x)}$ \\
+				\hline 
+				$\tan{(x)}$ & $\frac{1}{\cos^2(x)}$\\
+				\hline 
+				$\cot{(x)}$ & $-\frac{1}{\sin^2(x)}$\\
 				\hline
 				$\sinh{(x)}$ & $\cosh{(x)}$ \\
 				\hline
 				$\cosh{(x)}$ & $\sinh{(x)}$ \\
-				\hline
-			\end{tabular}
+				\hline\\
+				$\arcsin(x)$ & $\frac{1}{\sqrt{1-x^2}}$\\\\
+				\hline\\
+				$\arccos(x)$ & $-\frac{1}{\sqrt{1-x^2}}$\\\\
+				\hline\\
+				$\arctan(x)$ & $\frac{1}{1-x^2}$\\\\
+				\hline\\
+				arccot$(x)$ & $-\frac{1}{1-x^2}$\\\\
+			\end{tabular}\\\\\\
+			$\sinh{(x)} = \frac{1}{2}(e^x-e^-x)$ \\\\
+			$\cosh{(x)} = \frac{1}{2}(e^x+e^-x)$ 
 
 		\subsubsection{Regeln}
 			\begin{tabular}{|c|c|c|}
@@ -163,7 +181,7 @@
 				\hline
 				Produktregel & $(f*g)$ & $f^{'} *g + f* g^{'}$ \\
 				\hline
-				Quotientenregel & $(\frac{f}{g})$ & $\frac{f^{'}*g+f*g^{'}}{g^{2}}$ \\
+				Quotientenregel & $(\frac{f}{g})$ & $\frac{f^{'}*g-f*g^{'}}{g^{2}}$ \\
 				\hline
 				Kettenregel & $f(g(x))$ & $f^{'}(g(x))*g'(x)$ \\
 				\hline
@@ -171,6 +189,36 @@
 
 	\subsection{Tangentengleichung}
 		$$t(x) = f(x_{0}) +f^{'}(x_{0})*(x-x_{0})$$
+
+	\subsection{Stammfunktionen}
+			\begin{tabular}{c|c}
+				 \hline
+				$f(x)$ & $F(x)$ \\
+				\hline\\
+				$x^{n}$ & $\frac{1}{n+1}x^{n-1}+c$ \\\\
+				\hline\\
+				$\frac{1}{x}$ & $\ln{(|x|)}+c$ \\\\
+				\hline
+				$n*x^{n-1}$ & $x^n + c$\\
+				\hline\\
+				$x$ & $\frac{1}{2}x^2+c$\\\\
+				\hline
+				$2x$ & $x^2+c$\\
+				\hline
+				$\sqrt{x}$ & $\frac{2}{3}x^{\frac{3}{2}} + c$\\
+				\hline\\
+				$\sqrt[n]{x}$ & $\frac{n}{n+1}(\sqrt[n]{x})^{n+1} + c$\\\\
+				\hline
+				$\ln{x}$ & $x*\ln{(x)} -x + c$\\
+				\hline
+				$e^x$ & $e^x + c$\\
+				\hline\\
+				$e^{z*x}$ & $\frac{1}{z}e^{z*x} + c$\\\\
+				\hline
+				$\sin{(x)}$ & $-\cos{(x)}+ c$\\
+				\hline
+				$\cos{(x)}$ & $sin{(x)} + c$\\
+			\end{tabular}
 
 \section{Taylor Entwicklung}
 	Wird genutzt um aus Funktionen Reihen zu machen.\\ 
