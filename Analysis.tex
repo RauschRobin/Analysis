@@ -226,9 +226,63 @@
 				$\cos{(x)}$ & $sin{(x)} + c$\\
 			\end{tabular}
 
+	\subsection{Definitionsbereich und Wertemenge bestimmen}
+		Definitionsberich: Was darf man alles für x einsetzen darf. \\
+		Wertemenge: Die Menge die rauskommt, wenn man alles aus der Definitionsmegne einsetzt
+
+	\subsection{Nullstellen berechenn}
+		Gleichung gleich 0 setzen (f(x) = 0) und ausrechnen
+
+	\subsection{Y-Achsenabschnitt}
+		In die Funktion x=0 einsetzen und das Ergebnis berechnen
+
+	\subsection{Symmetrieverhalten bestimmen}
+		\subsubsection{Achsensymmetrie zur y-Achse}
+			Prüft, ob bei $f(-x)=f(x)$ dasselbe rauskommt
+		\subsubsection{Punktsymmetrie}
+			Punktsymmetrie liegt vor, wenn $-f(x)=f(-x)$
+
+	\subsection{Extremstellen/werte und Hoch/Tiefpunkte berechnen}
+		Extremstellen: $f^{'}(x) = 0$\\
+		Hoch- oder Tiefpunkt: $f^{''}(x)$ an der Nullstelle von $f^{'}(x)$ 
+			Ist $f^{''}(x)>0$ Tiefpunkt
+			Ist $f^{''}(x)<0$ Hochpunkt
+
+	\subsection{Wendepunkt}
+		2. Ableitung bestimmen und Nullstellen berechnen $\rightarrow$ hier sind Wendepunkte
+		3. Ableitung bestimmen um zu bestimmen, ob Rechts-Links-Wendepunkt oder Links-Rechts Wendepunkt 
+			$f^{'''}(x)>0$ rechts-links gekrümmt 
+			$f^{'''}(x)<0$ links-rechts gekrümmt
+			$f^{'''}(x)=0$ kein Wendepunkt
+
 \section{Taylor Entwicklung}
 	Wird genutzt um aus Funktionen Reihen zu machen.\\ 
 	Formel: $f(x) = \sum_{i = 0}^{\infty} \frac{f^{(i)}(x_0)}{i!} \cdot (x-x_0)^i$
+
+\section{Integrale}
+	\subsection{Berechnung}
+		$\int^a_b{f(x)} = F(a) - F(a)$
+
+	\subsection{Integralregeln}
+		\begin{enumerate}
+			\item Faktorregel \\
+				$\int {c*f(x)dx} = c * \int {f(x)dx}$
+			\item Potenzregel\\
+				$\int{x^n}dx = \frac{x^{n+1}}{n+1}$   $, x \ne -1$
+			\item Summenregel \\
+				$\int {(f(x) + g(x))dx} = \int{f(x)dx} + \int{g(x)dx}$ 
+			\item Partielle Integration\\
+				$\int{f(x)*g^{'}(x)dx} = f(x)*g(x) - \int{f^{'}(x)*g(x)dx}$
+			\item Substitutionsregel \\ 
+				$\int{f(g(x)) * g^{'}(x)dx} =\int{f(g(x))dx}$
+			\item Logarithmische Integration\\
+				$\int{\frac{f^{'}(x)}{f(x)}dx} = \ln{(|f(x)|)} $
+			\item Vertauschungsregel \\
+				$\int^a_b{f(x)dx} = - \int^b_a{f(x)dx}$
+			\item Gleichheit von oberer und unterer Grenze \\
+				$\int^a_a{f(x)dx} = 0$
+		\end{enumerate}
+
 
 \section{3d Bild} %Wir können jz auch Funktionen plotten --> sogar mega nice
 \begin{tikzpicture}
