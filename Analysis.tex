@@ -66,7 +66,7 @@
 	Geometrische Folgen haben ihre Variablen immer nur als Potenz bsp.: $a_{n}:~\frac{1}{2^{n}}$
 	
 \section{Cauchykriterium}
-	$$\forall_{\epsilon>0}~\exists_{n_{0}\in\mathbb{N}} ~\forall_{n \geq n_{\epsilon}~, m \geq n_{\epsilon}}: | a_{n}-a_{m} | < \epsilon$$
+	$$\forall_{\epsilon>0}~\exists_{n_{\epsilon}\in\mathbb{N}} ~\forall_{n \geq n_{\epsilon}~, m \geq n_{\epsilon}}: | a_{n}-a_{m} | < \epsilon$$
 	Für jedes $\epsilon > 0$ gibt es einen Index $n_{\epsilon} \in \mathbb{N}$, so dass für all $n\geq n_{\epsilon}$ und $m\geq n_{\epsilon}$,\\
 	die Abschätzung $| a_{n}-a_{m} | < \epsilon$ erfüllt ist.\\
 	Ist das Cauchy kriterium erfüllt ist die Folge konvergent, und hat einen Grenzwert
@@ -256,7 +256,7 @@
 			$f^{'''}(x)=0$ kein Wendepunkt
 
 \section{Taylor Entwicklung}
-	Wird genutzt um aus Funktionen Reihen zu machen.\\ 
+	Taylor Reihen sind Annäherungen an Funktionen um einen Punkt x an der Funktion. Hierzu wird die Funktion solange abgeleitet, bis ein Muster zu erkennen ist und dieses dann zu einer Reihe(mit Summenzeichen) umgeformt werden kann.\\ 
 	Formel: $f(x) = \sum_{i = 0}^{\infty} \frac{f^{(i)}(x_0)}{i!} \cdot (x-x_0)^i$
 
 \section{Integrale}
@@ -282,13 +282,5 @@
 			\item Gleichheit von oberer und unterer Grenze \\
 				$\int^a_a{f(x)dx} = 0$
 		\end{enumerate}
-
-
-\section{3d Bild} %Wir können jz auch Funktionen plotten --> sogar mega nice
-\begin{tikzpicture}
-	\begin{axis}[colormap/cool, hide axis]
-		\addplot3[mesh, samples=50]{1-x^2-y^2};
-	\end{axis}
-\end{tikzpicture}
 	
 \end{document}
