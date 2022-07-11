@@ -1,6 +1,4 @@
 # Analysis
 Zusammenfassung Analysis Semester 2 
 
-Regeln und Design: @Flo<br>
-  Tikz-Elemente sollen in \begin{center}\begin{figure}\begin{tikzpicture} gepackt werden<br>
-  ...
+Fehler und Anmerkungen bitte sofort an die Autoren melden
