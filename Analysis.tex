@@ -136,7 +136,7 @@
 \section{Kurvendiskussion}
 	\subsection{Newtonverfahren}
 		Annähern an Nullstellen durch Rekursion:\\
-		$x_{n+1} = x_n + \frac{f(x_n)}{f´(x_n)}$
+		$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$
 		
 	\subsection{Ableitungen}
 		\subsubsection{Grundfunktionen}
@@ -282,4 +282,16 @@
 				$\int^a_a{f(x)dx} = 0$
 		\end{enumerate}
 	
+	\subsection{Patrielle Integration}
+	\begin{center}
+		$\int u \cdot v' \,dx = u \cdot v - \int u' \cdot v \,dx$
+	\end{center}
+	bzw.\newline
+	\begin{center}
+		$\int u(x) \cdot v'(x) \,dx = u(x) \cdot v(x) - \int u'(x) \cdot v(x) \,dx$
+	\end{center}
+	Hierbei ist es leichter wenn u (bzw. u(x)) der durch Ableiten \textit{leichter} werdende Term ist. Also z.B. $2x^2$ oder $x$. \newline
+	Das v' (bzw. v'(x)) ist dann der sich weniger verändernde Teil. Also z.B. $e^x$
+
+
 \end{document}
