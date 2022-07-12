@@ -196,34 +196,42 @@
 		$$t(x) = f(x_{0}) +f^{'}(x_{0})*(x-x_{0})$$
 
 	\subsection{Stammfunktionen}
+		\begin{minipage}[c]{.3\textwidth}
 			\begin{tabular}{c|c}
-				 \hline
-				$f(x)$ & $F(x)$ \\
-				\hline\\
-				$x^{n}$ & $\frac{1}{n+1}x^{n-1}+c$ \\\\
-				\hline\\
-				$\frac{1}{x}$ & $\ln{(|x|)}+c$ \\\\
 				\hline
-				$n*x^{n-1}$ & $x^n + c$\\
-				\hline\\
-				$x$ & $\frac{1}{2}x^2+c$\\\\
-				\hline
-				$2x$ & $x^2+c$\\
-				\hline
-				$\sqrt{x}$ & $\frac{2}{3}x^{\frac{3}{2}} + c$\\
-				\hline\\
-				$\sqrt[n]{x}$ & $\frac{n}{n+1}(\sqrt[n]{x})^{n+1} + c$\\\\
-				\hline
-				$\ln{x}$ & $x*\ln{(x)} -x + c$\\
-				\hline
-				$e^x$ & $e^x + c$\\
-				\hline\\
-				$e^{z*x}$ & $\frac{1}{z}e^{z*x} + c$\\\\
-				\hline
-				$\sin{(x)}$ & $-\cos{(x)}+ c$\\
-				\hline
-				$\cos{(x)}$ & $sin{(x)} + c$\\
-			\end{tabular}
+			   $f(x)$ & $F(x)$ \\
+			   \hline\\
+			   $x^{n}$ & $\frac{1}{n+1}x^{n-1}+c$ \\\\
+			   \hline\\
+			   $\frac{1}{x}$ & $\ln{(|x|)}+c$ \\\\
+			   \hline
+			   $n*x^{n-1}$ & $x^n + c$\\
+			   \hline\\
+			   $x$ & $\frac{1}{2}x^2+c$\\\\
+			   \hline
+			   $2x$ & $x^2+c$\\
+			   \hline
+			   $\sqrt{x}$ & $\frac{2}{3}x^{\frac{3}{2}} + c$\\
+			   \hline\\
+			   $\sqrt[n]{x}$ & $\frac{n}{n+1}(\sqrt[n]{x})^{n+1} + c$\\\\
+			   \hline
+			   $\ln{x}$ & $x*\ln{(x)} -x + c$\\
+			   \hline
+			   $e^x$ & $e^x + c$\\
+			   \hline\\
+			   $e^{z*x}$ & $\frac{1}{z}e^{z*x} + c$\\\\
+			   \hline
+			   $\sin{(x)}$ & $-\cos{(x)}+ c$\\
+			   \hline
+			   $\cos{(x)}$ & $sin{(x)} + c$\\
+		   \end{tabular}
+		\end{minipage}
+		\begin{minipage}[c]{0.7\textwidth}
+			\begin{center}
+				\includegraphics[scale=0.8]{Bilder/Stammfunktionen.PNG}
+			\end{center}
+		\end{minipage}
+			
 
 	\subsection{Definitionsbereich und Wertemenge bestimmen}
 		Definitionsberich: Was darf man alles für x einsetzen darf. \\
@@ -256,7 +264,13 @@
 
 \section{Taylor Entwicklung}
 	Taylor Reihen sind Annäherungen an Funktionen um einen Punkt x an der Funktion. Hierzu wird die Funktion solange abgeleitet, bis ein Muster zu erkennen ist und dieses dann zu einer Reihe(mit Summenzeichen) umgeformt werden kann.\\ 
-	Formel: $f(x) = \sum_{i = 0}^{\infty} \frac{f^{(i)}(x_0)}{i!} \cdot (x-x_0)^i$
+	Formel: $f(x) = \sum_{i = 0}^{\infty} \frac{f^{(i)}(x_0)}{i!} \cdot (x-x_0)^i$\newline
+	\newline
+	\textbf{Wichtige Taylorreihen sind zum Beispiel:}\newline
+	\includegraphics[scale=1]{Bilder/e_hoch_x_taylor.PNG}\newline
+	\includegraphics[]{Bilder/ln_von_x_taylor.PNG}\newline
+	\includegraphics[scale=1.2]{Bilder/trigonometrische_taylor.PNG}\newline
+	\includegraphics[scale=1.2]{Bilder/mehr_trigonometrische_taylor.PNG}
 
 \section{Integrale}
 	\subsection{Berechnung}
@@ -281,6 +295,12 @@
 			\item Gleichheit von oberer und unterer Grenze \\
 				$\int^a_a{f(x)dx} = 0$
 		\end{enumerate}
+		
+		\subsubsection{Substitutionsregel Beispiel}
+		\textbf{Beispiel 1:}\newline
+		\includegraphics[scale=0.85]{Bilder/substitutionsregel1.PNG}\newline
+		\textbf{Beispiel 2:}\newline
+		\includegraphics[scale=0.65]{Bilder/substitutionsregel2.PNG}
 	
 	\subsection{Patrielle Integration}
 	\begin{center}
@@ -292,6 +312,5 @@
 	\end{center}
 	Hierbei ist es leichter wenn u (bzw. u(x)) der durch Ableiten \textit{leichter} werdende Term ist. Also z.B. $2x^2$ oder $x$. \newline
 	Das v' (bzw. v'(x)) ist dann der sich weniger verändernde Teil. Also z.B. $e^x$
-
 
 \end{document}
